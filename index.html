@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script src="p5.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&amp;display=swap" rel="stylesheet">
+  <script src="p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+  <script src="minimax.js"></script>
+
+  <div class="grid-container">  
+    <div class="Title">
+      <h1>Connect<span class="four">4</span></h1>
+    </div>
+    
+    <div class="Connect4">
+      <div id="gameBoard"></div>
+    </div>
+    
+    <div class="Buttons">
+      <button id="reset" onclick="restart()"> Try Again?</button>
+      <button id="easyB" class="easyB" onclick="goEasy()">Easy</button>
+      <button id="medB" class="medB" onclick="goMed()">Medium</button>
+      <button id="hardB" class="hardB" onclick="goHard()">Hard</button>
+    </div>
+    
+  </div>
+
+
+</body></html>
