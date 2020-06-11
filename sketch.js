@@ -28,23 +28,15 @@ let random = false
 
 function setup() {
   
-  //canvasWidth = min(windowWidth,800)
-  //let cnv = createCanvas(canvasWidth, 450);
+//create board
   let cnv = createCanvas( min(windowWidth/1.25, 525), 450);
   cnv.parent('gameBoard')
-  //create board
-  
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
-  //cnv.position(x, y);
-  //cnv.style('border-radius', '10px');
-  cnv.style('border', 'solid 10px #0174D5');
-  
   let w = width / 7;
   let h = height / 6
   for (let horz = 0; horz < 7; horz++) {
     for (let vert = 0; vert < 6; vert++) {
-      
       let x1 = w * horz + w / 2;
       let y1 = h * vert + h / 2;
        fill('#33383D')
@@ -53,34 +45,12 @@ function setup() {
        ellipse(x1, y1, w / 1.12)
       }
   }
-      
-  
 
  // Toggles for the difficulty
-  //easyH = windowHeight - 150
-  //easyW = 140 
-  //easyB = createButton('Easy')
-  //easyB = document.getElementById('easyB')
-  //easyB.style('color','black')
-  //easyB.position(easyW,easyH)
-  //medB = createButton('Medium')
-  //medB.style('color','black')
-  //medB.style('background-color', '#7ac3ff')
-  //medB.position(easyW+70,easyH)
-  //hardB = createButton('Hard')
- // hardB.style('color','black')
-  //hardB.position(easyW+160,easyH)
-  
-  //easyB.mousePressed(goEasy)
- //medB.mousePressed(goMed)
-  //hardB.mousePressed(goHard)
   goMed()
   frameRate(1)
   currentPlayer = human
   cnv.mouseClicked(humanMove)
-  //aiMove()
-
-
 }
 
 
@@ -250,9 +220,6 @@ function hello(){
 
 function goEasy(){
   if(count == 0){
-    //easyB.style('background-color', '#7ac3ff')
-    //medB.style('background-color', '#fff')
-    //hardB.style('background-color', '#fff')
     document.getElementById('easyB').style.backgroundColor = '#0174D5';
     document.getElementById('medB').style.background = 'none';
     document.getElementById('hardB').style.background = 'none';
@@ -267,8 +234,6 @@ function goMed(){
     document.getElementById('easyB').style.background = 'none';
     document.getElementById('medB').style.backgroundColor = '#0174D5';
     document.getElementById('hardB').style.background = 'none';
-    //medB.style('background-color', '#7ac3ff')
-    //hardB.style('background-color', '#fff')
     easy = false
     medium = true
     hard = false
@@ -280,20 +245,11 @@ function goHard(){
     document.getElementById('easyB').style.background = 'none';
     document.getElementById('medB').style.background = 'none';
     document.getElementById('hardB').style.backgroundColor = '#0174D5';
-    //hardB.style('background-color', '#7ac3ff')
-    //medB.style('background-color', '#fff')
-    //easyB.style('background-color', '#fff')
     easy = false
     medium = false
     hard = true
   }
 }
-
-
-
-
-
-
 
 function checkWinnerDraw(result) {
   let vert1 = 0

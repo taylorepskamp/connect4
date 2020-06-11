@@ -126,33 +126,3 @@ else {
   return bestScore
 }
 }
-
-
-function aiMoveTest() {
-  let freeSpot = []
-
-  for (let horz = 0; horz < 7; horz++) {
-    for (let vert = 5; vert > -1; vert--) {
-      if (board[vert][horz] == '') {
-        freeSpot.push({
-          vert,
-          horz
-        })
-        break
-      }
-    }
-  }
-  let move = freeSpot[Math.floor(Math.random() * freeSpot.length)]
-  //set ai choice in board
-  board[move.vert][move.horz] = ai
-  let w = width / 7;
-  let h = height / 6;
-  let x = w * move.horz + w / 2;
-  let y = h * move.vert + h / 2;
-  fill('#FF6868')
-  stroke('#024b87')
-  strokeWeight(2);
-  ellipse(x, y, w / 1.25)
-  //switch currentplayer back to human
-  currentPlayer = human
-}

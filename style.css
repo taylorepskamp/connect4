@@ -1,35 +1,21 @@
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color:#33383D;
+  background-color: #33383D;
   font-family: 'Inter', sans-serif;
 }
-canvas {
-  display: block;
-}
 
-human {
-  fill: red;
-}
 
-ai {
-  fill: blue;
-}
-
-ellipse{
-  fill: blue;
-  color: blue;
-}
 
 button {
- color: white;
-  text-align:center;
+  color: white;
+  text-align: center;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
   padding: 0.35em 1.2em;
   margin: 0 0.3em 0.3em 0;
- border-radius:0.12em;
+  border-radius: 0.12em;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   background: none;
@@ -40,60 +26,70 @@ button {
   grid-template-columns: .25fr 3fr .25fr;
   grid-template-rows: .25fr 1fr 3fr 1fr .25fr;
   grid-gap: 1px 1px;
-  grid-template-areas: ". . ." ". Title ." ". Connect4 ." ". Buttons ." ". . .";
+  grid-template-areas: ". . ."". Title ."". Connect4 ."". Buttons ."". . .";
 }
 
-.Connect4 { grid-area: Connect4; 
+.Connect4 {
+  grid-area: Connect4;
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
-#gameBoard{
+#gameBoard {
   background: #0174D5;
-  border-radius:10px;
+  border-radius: 10px;
   border: solid 10px #0174D5;
 }
 
-.Title { grid-area: Title; 
+.Title {
+  grid-area: Title;
   display: grid;
   font-size: 25px;
   color: white;
-  
   justify-content: center;
   align-items: center;
-
 }
 
-h1{
+/*four in title*/
+
+.four {
+  color: #FF6868;
+}
+
+h1 {
   border: 2px solid white;
   padding: 4px 15px;
   border-radius: 50px;
 }
 
-.Buttons { grid-area: Buttons;
+/*button div*/
+
+.Buttons {
+  grid-area: Buttons;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 100px);
   justify-content: center;
   grid-gap: 1px 25px;
   align-items: center;
 }
 
-.four{
-  color: #FF6868;
+
+
+
+#reset {
+  visibility: hidden
 }
 
-#reset{
-  visibility:hidden
-}
 .easyB {
   grid-column-start: 2;
-  
+
 }
+
 .medB {
   grid-column-start: 3;
 }
+
 .hardB {
   grid-column-start: 4;
 }
-
