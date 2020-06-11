@@ -23,8 +23,8 @@ button {
 
 .grid-container {
   display: grid;
-  grid-template-columns: .25fr 3fr .25fr;
-  grid-template-rows: .25fr 1fr 3fr 1fr .25fr;
+  grid-template-columns: 5px 3fr 5px;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
   grid-gap: 1px 1px;
   grid-template-areas: ". . ."". Title ."". Connect4 ."". Buttons ."". . .";
 }
@@ -34,6 +34,10 @@ button {
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+.four {
+  color: #FF6868;
 }
 
 #gameBoard {
@@ -49,12 +53,7 @@ button {
   color: white;
   justify-content: center;
   align-items: center;
-}
 
-/*four in title*/
-
-.four {
-  color: #FF6868;
 }
 
 h1 {
