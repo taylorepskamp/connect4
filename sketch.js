@@ -29,7 +29,7 @@ let random = false
 function setup() {
   
 //create board
-  let cnv = createCanvas( min(windowWidth/1.25, 525), 450);
+  let cnv = createCanvas( 525, 450);
   cnv.parent('gameBoard')
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
