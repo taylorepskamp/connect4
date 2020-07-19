@@ -1,6 +1,6 @@
 # connect4
 
-An app to play connect4 against AI
+Play connect4 against AI
 
 ## Stock
 
